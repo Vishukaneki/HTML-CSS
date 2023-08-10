@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> P1</title>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        div{
+            border: solid black 1px;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to bottom, pink,white);
+           
+        }
+        .img1{
+            height: 300px;
+            width: 200px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+
+        } 
+        img{
+            height: 300px;
+            width: 200px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+
+        }
+        .container2{
+            height: 300px;
+            width: 340px;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            background-color: rgba(26, 126, 31, 0.185);
+        }
+        .p3{
+            font-size: 23px;
+            color: rgb(41, 132, 41);    
+            font-weight: bolder;
+        }
+        sub{
+            font-size: 14px;
+            font-weight:lighter;
+            color:grey;
+            text-decoration: line-through;
+        }
+        button{
+            margin: 16px;
+            height: 34px;
+            width: 90%;
+            font-size: medium;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aliceblue;
+            background-color: rgba(30, 136, 30, 0.818);
+            border-radius: 8px;
+            border: hidden;
+        }
+        button:hover{
+            cursor: pointer;
+            box-shadow: 3px 2px 3px rgba(12, 12, 12, 0.256);
+            transition: 0.15s;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="img1"><img src="mug.jpg" alt="mug"></div>
+            <div class="container2">
+                <p class="p1">C O F F E E M U G</p>
+                <br>
+                <h1>futuristic Coffee Mug</h1><br>
+                <p class="p2">coffee mugs Lorem ipsum dolor 
+                sit amet consectetur adipisicing elit. Enim officiis facilis impedit molestiae provident illum quisquam quos odio dolorem alias.</p><br>
+                <p class="p3">Rs 149 <sub>Rs 230</sub></p> 
+                <a href="https://amzn.eu/d/4mYRKop" target="_blank"><button class="b1"> Add To Cart</button></a>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

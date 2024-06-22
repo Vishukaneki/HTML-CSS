@@ -1,0 +1,46 @@
+// UNDERSTANDING PROTOTYPAL INERITANCE BASICS 001
+
+
+const car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+
+  this.accelerate = function () {
+    this.speed = speed + 10;
+    return this.speed; // car.accelerate function
+  };
+  this.brake = function () {
+    this.speed = speed - 10; // car.brake functin
+  };
+};
+const car1 = new car("ferrari", 120);
+console.log(car1.accelerate());
+
+const car2 = function (_make, _velocity, acceleration) {
+  this.make = _make;
+  this.velocity = _velocity;
+  this.acceleration = acceleration;
+};
+car2.prototype.accelerationF = function () {
+  console.log(`the accelaration is ${this.acceleration} m/s2`);
+  return `velocity=${this.velocity + this.acceleration} m/s`;
+};
+const ferrari = new car2("Ferrari", 130, 30);
+console.log(ferrari.accelerationF());
+console.log(car.prototype); // empty object we didnt make any prototype of it
+console.log(car2.prototype); // protoype is not a function
+console.log(car2.__proto__);
+console.log(ferrari.prototype);
+console.log(ferrari.__proto__); // the function inherited by it
+console.log(ferrari.__proto__.__proto__); // object
+console.log(ferrari.__proto__.constructor); // points to the function directly
+
+const porshe = new car2("porshe", 100, 40);
+console.log(porshe.accelerationF());
+console.log(car.prototype); // empty object we didnt make any prototype of it
+console.log(car2.prototype); // protoype is not a function
+console.log(car2.__proto__);
+console.log(porshe.prototype);
+console.log(porshe.__proto__); // the function inherited by it
+console.log(porshe.__proto__.__proto__); // object
+console.log(porshe.__proto__.constructor); // points to the function directly
